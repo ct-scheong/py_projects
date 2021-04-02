@@ -1,6 +1,6 @@
 **EDA**
 
-For this particular assignment, I initially started by visualizing and understanding the dataset. Firstly, I checked for any missing values and noticed that 2 records contained missing values. I replaced them with 0 because there weren’t very many of them, and because the primary goal is to build a predictive model rather than perform data analysis (if that was the case I would have probably replaced with the mean of the column instead of the 0).
+For this particular project, I initially started by visualizing and understanding the dataset. Firstly, I checked for any missing values and noticed that 2 records contained missing values. I replaced them with 0 because there weren’t very many of them, and because the primary goal is to build a predictive model rather than perform data analysis (if that was the case I would have probably replaced with the mean of the column instead of the 0).
 The second thing I noticed was that there was no variable provided to flag if a customer actually is considered churned. For the purpose of this assignment, I assumed that customers pay month-to-month and that if a customer does not have any future activity records after month X, that means they have “churned” on month X.
 Lastly, I looked to see if there was any degree of multicollinearity between the variables. I tried both a correlation matrix and calculating variance inflation factor (VIF). Neither of those results suggested any glaring issues with the original variable set, so I did not feel the need to do feature engineering or to drop any of these variables from model consideration.
 
@@ -11,7 +11,7 @@ I also ended up standardizing the variables as well so that the different ranges
 
 **Model Selection**
 
-Given the scope of this assignment, I decided to use a simple-to-interpret model to try and predict churn. I chose Logistic Regression for this reason, even though it does have quite a few assumptions (variables are independent, little/no multicollinearity, large sample size, etc.). I did consider trying tree-based models, but because I did not have the dependent variable explicitly provided and the number of assumptions I had to make, I didn’t want the model to be too prone to overfitting.
+I decided to use a simple-to-interpret model to try and predict churn. I chose Logistic Regression for this reason, even though it does have quite a few assumptions (variables are independent, little/no multicollinearity, large sample size, etc.). I did consider trying tree-based models, but because I did not have the dependent variable explicitly provided and the number of assumptions I had to make, I didn’t want the model to be too prone to overfitting.
 Model Interpretation
 Looking at the coefficients, we see that:
 •	Longer tenure = decreased likelihood to churn
